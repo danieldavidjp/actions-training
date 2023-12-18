@@ -19,5 +19,5 @@ jobs:
           who-to-greet: '@danieldavidjp'
 
       - name: Output time in container
-        run: echo "The last time was ${{ step.hello-action.outpus.time }} when the action say hello"
+        run: echo "The last time was ${{ steps.hello-action.outpus.time }} when the action say hello"
       
