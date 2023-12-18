@@ -1,0 +1,19 @@
+name: Hello, World!
+description: Great Someone
+author: DDJP
+
+inputs:
+  who-to-greet:
+    description: Who to greet
+    required: true
+    defauld: World
+
+outputs:
+  time:
+    description: Time action was run
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    INPUT_WHO_TO_GREET: %{{ inputs.who-to-greet }}
