@@ -9,5 +9,5 @@ jobs:
 
     steps:
       - name: echo branch
-      - run : echo ${github.ref}
+        run : echo ${github.ref}
     
