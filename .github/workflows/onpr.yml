@@ -1,0 +1,15 @@
+name: on-pr-closed
+on:
+  pull_request:
+    types: closed
+    branches: 'release/*'
+
+jobs:
+  pr-closed:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: branch
+      run: echo ${github.head_ref}
+  
+    
