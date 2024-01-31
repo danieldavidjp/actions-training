@@ -4,7 +4,7 @@ on:
 
 jobs:
   run-condition:
-    if: github.ref=='/release*'
+    if: ${{ contains(github.ref, 'release')}}
     runs-on: ubuntu
 
     steps:
