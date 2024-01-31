@@ -1,0 +1,13 @@
+name: test on push
+on:
+  push:
+
+jobs:
+  run-condition:
+    if: github.ref=='/release*'
+    runs-on: ubuntu
+
+    steps:
+      - name: echo branch
+      - run : echo ${github.ref}
+    
